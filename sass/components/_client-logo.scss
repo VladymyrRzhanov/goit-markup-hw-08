@@ -1,0 +1,16 @@
+.client-link {
+  @extend %flex;
+  width: 170px;
+  height: 90px;
+  border: 1px solid $social-link-color;
+  border-radius: 4px;
+  fill: $social-link-color;
+
+  @include transition(fill, border-color);
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+    fill: $accent-color;
+  }
+}

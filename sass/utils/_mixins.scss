@@ -1,0 +1,25 @@
+// Миксин для шрифта со всеми значениями (weight, size, height, spacing)
+
+@mixin fontAll($weight, $size, $height, $spacing) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+}
+
+// Миксин для шрифта без значения толщины (size, height, spacing)
+
+@mixin fontAll-w($size, $height, $spacing) {
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+}
+
+// Миксин для функии более одного transition
+
+@mixin transition($properties...) {
+  transition: $changes;
+  @if length($properties) > 0 {
+    transition-property: $properties;
+  }
+}

@@ -1,0 +1,45 @@
+body {
+  padding-top: 80px;
+  background-color: $white-color;
+  font-family: $font-main;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #ececec;
+
+  &__main-menu {
+    @extend %flex;
+  }
+
+  &__menu {
+    @extend %flex;
+  }
+}
+
+/* Контакты в навигации шапки */
+
+.contacts-link {
+  display: inline-flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  align-items: center;
+  @include fontAll(500, 14px, 1.14, 0.02em);
+  color: $text-color;
+  @include transition(color);
+
+  &__icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
