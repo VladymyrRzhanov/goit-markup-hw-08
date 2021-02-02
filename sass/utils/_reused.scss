@@ -1,77 +1,95 @@
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
-  &--narrow {
-    padding-top: 0;
-  }
+    &--narrow {
+        display: none;
+    }
 
-  &--light-background {
-    background-color: $light-background-color;
-  }
-}
-
-.section__title {
-  margin-bottom: 50px;
-  @include fontAll(700, 36px, 1.16, 0.03em);
-  text-align: center;
-  color: $heading-color;
-
-  &--visually-hidden {
-    @extend %hidden;
-  }
+    &--light-background {
+        background-color: $light-background-color;
+    }
 }
 
 .container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: 480px) {
+        width: 480px;
+    }
+    
+    @media screen and (min-width: 768px) {
+        width: 768px;
+    }
+    
+      @media screen and (min-width: 1200px) {
+        width: 1200px;
+    }
+}
+  
+.button {
+    height: 50px;
+    font-family: inherit;
+    @include fontAll(700, 16px, 1.87, 0.06em);
+    cursor: pointer;
+    color: $white-color;
+  
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-color: transparent;
+}
+
+.section__title {
+    margin-bottom: 30px;
+    @include fontAll(700, 28px, 1.18, 0.03em);
+    text-align: center;
+    color: $heading-color;
+  
+    &--visually-hidden {
+      @extend %hidden;
+    }
 }
 
 .subtitle {
-  @include fontAll(700, 14px, 1.14, 0.03em);
-  text-transform: uppercase;
+    @include fontAll(700, 14px, 1.14, 0.03em);
+    text-transform: uppercase;
 }
 
-.list {
-  @extend %flex;
+.social-list {
+    @extend %flex;
+      
+    &--wider {
+      padding-bottom: 24px;
+    }
 
-  &--right {
-    margin-left: auto;
-  }
-
-  &--wider {
-    padding: 0 32px 30px 32px;
-  }
+    &__item:not(:last-child) {
+        margin-right: 10px;
+    }
 }
 
 .list__item {
-  margin-right: 30px;
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  &--narrow {
-    margin-right: 10px;
-  }
-
-  &--narrow:last-child {
-    margin-right: 0;
-  }
+    
+    &--bottom:not(:last-child) {
+        margin-bottom: 30px;
+    }
+ 
 }
 
-.button {
-  height: 50px;
-  font-family: inherit;
-  @include fontAll(700, 16px, 1.87, 0.06em);
-  cursor: pointer;
-  color: $white-color;
+.flex {
 
-  background-color: $accent-color;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border-color: transparent;
+    &__list {
+        @extend %flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+
+    &__item {
+        flex-basis: calc((100% - 2 * 30px) / 2 );
+        margin: 15px;
+    }
 }
+    

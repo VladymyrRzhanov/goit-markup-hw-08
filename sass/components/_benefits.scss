@@ -1,24 +1,26 @@
 .benefits {
-  @extend %flex;
-  width: 270px;
-  height: 120px;
-  margin-bottom: 30px;
+    @extend %flex;
+    height: 120px;
+    margin-bottom: 30px;
+  
+    background-color: $light-background-color;
+    border-radius: 4px;
+  
+    &__icon {
+      width: 70px;
+      height: 70px;
+    }
 
-  background-color: $light-background-color;
-  border-radius: 4px;
-
-  &__icon {
-    width: 70px;
-    height: 70px;
-  }
-
-  &__subtitle {
-    margin-bottom: 10px;
-    color: $heading-color;
-  }
-
-  &__text {
-    @include fontAll-w(14px, 1.71, 0.03em);
-    color: $text-color;
-  }
+    &__subtitle {
+        margin-bottom: 10px;
+        color: $heading-color;
+        @media screen and (max-width: 767px) {
+            text-align: center;
+        }
+    }
+    
+    &__text {
+        @include fontAll-w(14px, 1.71, 0.03em);
+        color: $text-color;
+    }  
 }
