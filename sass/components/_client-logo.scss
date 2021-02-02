@@ -1,16 +1,26 @@
-.client-link {
-    @extend %flex;
-    height: 90px;
-    border: 1px solid $social-link-color;
-    border-radius: 4px;
-    fill: $social-link-color;
-  
-    @include transition(fill, border-color);
-  
-    &:hover,
-    &:focus {
-      border-color: $accent-color;
-      fill: $accent-color;
-    }
+.client-list {
+  @extend %flex;
+  flex-wrap: wrap;
+  margin: -15px;
+
+  &__item {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
   }
-  
+}
+
+.client-list__link {
+  @extend %flex;
+  height: 90px;
+  border: 1px solid $social-link-color;
+  border-radius: 4px;
+  fill: $social-link-color;
+
+  @include transition(fill, border-color);
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+    fill: $accent-color;
+  }
+}

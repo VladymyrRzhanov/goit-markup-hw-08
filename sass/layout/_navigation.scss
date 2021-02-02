@@ -1,6 +1,30 @@
 .site-nav {
-display: none;
+  display: none;
 }
 .list--right {
+  display: none;
+}
+
+.header__menu {
+  @extend %flex;
+  justify-content: space-between;
+}
+.burger-menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &__close {
+    fill: $heading-color;
     display: none;
+  }
+}
+
+.burger-menu__open {
+  fill: $heading-color;
+
+  .burger-menu:hover &,
+  .burger-menu:focus & {
+    fill: $accent-color;
+  }
 }

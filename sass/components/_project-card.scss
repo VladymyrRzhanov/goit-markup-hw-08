@@ -1,0 +1,58 @@
+.project {
+  &__thumb {
+    position: relative;
+    overflow: hidden;
+    @extend %flex;
+  }
+
+  &__meta {
+    padding: 20px 24px;
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  &__type {
+    margin-bottom: 4px;
+    @include fontAll(700, 18px, 2, 0.06em);
+    text-align: left;
+    color: $heading-color;
+  }
+
+  &__name {
+    @include fontAll-w(16px, 1.87, 0.03em);
+    text-align: left;
+    color: $text-color;
+  }
+}
+
+.project__link {
+  display: inline-block;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 4px 4px rgba(0, 0, 0, 0),
+    1px 4px 6px rgba(0, 0, 0, 0);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.project__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 77px 24px;
+  @include fontAll-w(18px, 1.56, 0.03em);
+  color: $white-color;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  @include transition(transform);
+
+  .project__link:hover &,
+  .project:focus & {
+    transform: translateY(0%);
+  }
+}
