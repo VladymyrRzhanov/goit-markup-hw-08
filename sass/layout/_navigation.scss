@@ -1,14 +1,15 @@
 .main-nav {
-    display: none;
+    transform: translateY(-100%);
     position: absolute;
     top: 0;
     width: 100%;
     left: 0;
     padding: 48px 40px;
     background-color: $white-color;
+    @include transition(transform);
 
     &.is-open {
-        display: block;
+        transform: translateY(0);
     }
 }
 
@@ -16,6 +17,7 @@
   @extend %flex;
   justify-content: space-between;
 }
+
 .burger-menu {
     position: relative;
     z-index: 2;
@@ -26,6 +28,7 @@
     border: none;
     cursor: pointer;
 }
+
 .burger-menu__close {
   fill: $heading-color;
   display: none;
