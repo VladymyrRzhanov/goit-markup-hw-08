@@ -17,36 +17,43 @@
             <nav class="header__menu">
                 <a class="logo logo--top" href="./index.html" lang="en"><span class="logo__text">Web</span>Studio</a>
         
-                <ul class="site-nav">
-                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--current" href="./index.html">Студия</a></li>
-                    <li class="site-nav__item"><a class="site-nav__link" href="./portfolio.html">Портфолио</a></li>
-                    <li class="site-nav__item"><a class="site-nav__link" href="">Контакты</a></li>
-                </ul>
-                <button type="button" class="burger-menu">
+                <button type="button" class="burger-menu" aria-expanded="true" aria-controls="main-nav" data-menu-button>
                     <svg width="40" height="40">
-                        <use class="burger-menu__open" href="./images/icons.svg#icon-menuburg"></use>
                         <use class="burger-menu__close" href="./images/icons.svg#icon-closeburg"></use>
+                        <use class="burger-menu__open" href="./images/icons.svg#icon-menuburg"></use>
                     </svg>
                 </button>
+                <div class="main-nav" data-menu id="main-nav">
+                    <ul class="site-nav">
+                        <li class="site-nav__item"><a class="site-nav__link site-nav__link--current" href="./index.html">Студия</a></li>
+                        <li class="site-nav__item"><a class="site-nav__link" href="./portfolio.html">Портфолио</a></li>
+                        <li class="site-nav__item"><a class="site-nav__link" href="">Контакты</a></li>
+                    </ul>
+                    <ul class="contacts-list">
+                        <li class="contacts-list__item site-nav__item">
+                            <a href="tel:+380961111111" class="contacts-link contacts-link--active">
+                                <svg class="contacts-link__icon" width="10" height="16">
+                                    <use href="./images/icons.svg#icon-smartphone"></use>
+                                </svg>+38 096 111 11 11
+                            </a>
+                        </li>
+                        <li class="contacts-list__item site-nav__item">
+                            <a href="mailto:info@devstudio.com" lang="en" class="contacts-link">
+                                <svg class="contacts-link__icon" width="16" height="12">
+                                    <use href="./images/icons.svg#icon-mail"></use>
+                                </svg>
+                                info@devstudio.com
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="contacts-social">
+                        <li class="contacts-social__item"><a class="contacts-social__link" href="">Twitter</a></li>
+                        <li class="contacts-social__item"><a class="contacts-social__link" href="">Facebook</a></li>
+                        <li class="contacts-social__item"><a class="contacts-social__link" href="">LinkedIn</a></li>
+                        <li class="contacts-social__item"><a class="contacts-social__link" href="">Instagram</a></li>
+                    </ul>
+                </div>
             </nav>
-        
-            <ul class="list list--right">
-                <li class="list__item">
-                    <a href="mailto:info@devstudio.com" lang="en" class="contacts-link">
-                        <svg class="contacts-link__icon" width="16" height="12">
-                            <use href="./images/icons.svg#icon-mail"></use>
-                        </svg>
-                        info@devstudio.com
-                    </a>
-                </li>
-                <li class="list__item">
-                    <a href="tel:+380961111111" class="contacts-link">
-                        <svg class="contacts-link__icon" width="10" height="16">
-                            <use href="./images/icons.svg#icon-smartphone"></use>
-                        </svg>+38 096 111 11 11
-                    </a>
-                </li>
-            </ul>
         </div>
     </header>
 
@@ -263,7 +270,7 @@
                                 </li>
                                 <li class="social-list__item">
                                     <a href="" class="social-link" aria-label="Линкедин">
-                                        <svg class="social-link__icon">
+                                        <svg class="social-link__icon" aria-label="Переключатель меню">
                                             <use href="./images/icons.svg#icon-linkedin"></use>
                                         </svg>
                                     </a>
@@ -473,5 +480,6 @@
         </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/burger.js"></script>
 </body>
 </html>
