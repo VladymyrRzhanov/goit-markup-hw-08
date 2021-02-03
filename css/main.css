@@ -498,7 +498,7 @@ body {
 
 .burger-menu {
   position: relative;
-  z-index: 3;
+  z-index: 2;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -922,10 +922,6 @@ body {
 
 .modal {
   position: relative;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
   max-width: 450px;
   max-height: 609px;
   padding: 40px;
