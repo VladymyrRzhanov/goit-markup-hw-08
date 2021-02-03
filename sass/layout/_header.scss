@@ -6,3 +6,46 @@ body {
   .header {
     position: relative;
   }
+
+  .header__menu {
+    @extend %flex;
+    justify-content: space-between;
+  }
+  
+  .burger-menu {
+      position: relative;
+      z-index: 2;
+      display: inline-flex;
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+  }
+  
+  .burger-menu__close {
+    fill: $heading-color;
+    display: none;
+  
+      .burger-menu:hover &,
+      .burger-menu:focus & {
+          fill: $accent-color;
+      }
+  
+      .burger-menu.is-open & {
+          display: block;
+      }
+  }
+  
+  .burger-menu__open {
+    fill: $heading-color;
+  
+    .burger-menu:hover &,
+    .burger-menu:focus & {
+      fill: $accent-color;
+    }
+  
+    .burger-menu.is-open & {
+      display: none;
+     }
+  }
