@@ -291,6 +291,12 @@ li {
   list-style: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 /* raleway-700 - latin_cyrillic */
 @font-face {
   font-family: "Raleway";
