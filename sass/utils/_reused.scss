@@ -17,16 +17,16 @@
   margin-left: auto;
   margin-right: auto;
 
-  @media screen and (min-width: 480px) {
-    width: 480px;
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
   }
 
-  @media screen and (min-width: 768px) {
-    width: 768px;
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
   }
 
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
   }
 }
 
@@ -59,8 +59,29 @@
   text-transform: uppercase;
 }
 
+.list {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+.list__item {
+    @media screen and (min-width: $tablet) {
+      flex-basis: calc((100% - 2 * 30px) / 2);
+      margin: 15px;
+    }
+  }
+}
+
 .list__item:not(:last-child) {
   @media screen and (max-width: 767px) {
     margin-bottom: 30px;
   }
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+  
 }

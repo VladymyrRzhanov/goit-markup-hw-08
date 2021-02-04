@@ -4,7 +4,14 @@
   justify-content: flex-start;
   align-content: space-between;
   margin-bottom: 40px;
-  min-height: 91px;
+  @media screen and (max-width: $tablet - 1px) {
+    min-height: 91px;
+  }
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 30px;
+    justify-content: center;
+    align-content: center;
+  }
 
   &__item:not(:last-child) {
     margin-right: 8px;

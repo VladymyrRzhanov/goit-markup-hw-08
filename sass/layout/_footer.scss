@@ -4,9 +4,20 @@
     background-color: $dark-background-color;
 }
 
+.footer__container {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
 .address-container {
     margin-bottom: 60px;
     text-align: center;
+    @media screen and (min-width: $tablet) {
+      margin-right: 165px;;
+    }
 }
 
 .address-list__item:not(:last-child) {
@@ -64,6 +75,9 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
+    @media screen and (min-width: $tablet) {
+      width: 450px;
+    }
   
     &::placeholder {
       @include fontAll-w(16px, 1.25, 0.03em);
