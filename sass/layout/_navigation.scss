@@ -1,12 +1,17 @@
 .main-nav {
-  transform: translateY(-100%);
   position: absolute;
   z-index: 1;
   top: 0;
-  width: 100%;
+  right: 0;
+  bottom: 0;
   left: 0;
   padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: $white-color;
+  overflow: hidden;
+  transform: translateY(-100%);
   @include transition(transform);
 
   &.is-open {
@@ -15,8 +20,7 @@
 }
 
 .site-nav {
-  margin-bottom: 302px;
-
+  
   &__item:not(:last-child) {
     margin-bottom: 32px;
   }

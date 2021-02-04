@@ -449,10 +449,6 @@ body {
   font-family: "Roboto";
 }
 
-.header {
-  position: relative;
-}
-
 .header__menu {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -472,6 +468,19 @@ body {
   cursor: pointer;
 }
 
+.burger-menu__open {
+  fill: #212121;
+}
+
+.burger-menu:hover .burger-menu__open,
+.burger-menu:focus .burger-menu__open {
+  fill: #2196f3;
+}
+
+.burger-menu.is-open .burger-menu__open {
+  display: none;
+}
+
 .burger-menu__close {
   fill: #212121;
   display: none;
@@ -484,19 +493,6 @@ body {
 
 .burger-menu.is-open .burger-menu__close {
   display: block;
-}
-
-.burger-menu__open {
-  fill: #212121;
-}
-
-.burger-menu:hover .burger-menu__open,
-.burger-menu:focus .burger-menu__open {
-  fill: #2196f3;
-}
-
-.burger-menu.is-open .burger-menu__open {
-  display: none;
 }
 
 .logo {
@@ -523,15 +519,27 @@ body {
 }
 
 .main-nav {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
   position: absolute;
   z-index: 1;
   top: 0;
-  width: 100%;
+  right: 0;
+  bottom: 0;
   left: 0;
   padding: 48px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #ffffff;
+  overflow: hidden;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transition-property: -webkit-transform;
@@ -543,10 +551,6 @@ body {
 .main-nav.is-open {
   -webkit-transform: translateY(0);
           transform: translateY(0);
-}
-
-.site-nav {
-  margin-bottom: 302px;
 }
 
 .site-nav__item:not(:last-child) {
@@ -643,10 +647,6 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
-}
-
-.footer__container {
-  margin: 0 auto;
 }
 
 .address-container {
@@ -766,7 +766,7 @@ body {
 }
 
 .hero__title-container {
-  width: 360px;
+  max-width: 360px;
   margin: 0 auto 30px;
 }
 
