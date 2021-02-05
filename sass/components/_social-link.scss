@@ -1,13 +1,18 @@
 .social-list {
   @extend %flex;
 
-  &--bottom {
-    padding-bottom: 24px;
-  }
+  
 
   &__item:not(:last-child) {
     margin-right: 10px;
   }
+}
+
+.social-list--bottom {
+    padding-bottom: 24px;
+    @media screen and (min-width: $desktop) {
+      padding-bottom: 30px;
+    }
 }
 
 .social-link {

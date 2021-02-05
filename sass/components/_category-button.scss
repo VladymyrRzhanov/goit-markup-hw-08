@@ -3,14 +3,17 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 46px;
   @media screen and (max-width: $tablet - 1px) {
     min-height: 91px;
   }
   @media screen and (min-width: $tablet) {
-    margin-bottom: 30px;
+    margin-bottom: 36px;
     justify-content: center;
     align-content: center;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
   }
 
   &__item:not(:last-child) {

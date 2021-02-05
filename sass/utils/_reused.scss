@@ -1,9 +1,16 @@
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
   &--narrow {
-    display: none;
+    padding-top: 0;
+    @media screen and (max-width: $desktop - 1px) {
+      display: none;
+    }
   }
 
   &--light-background {
@@ -49,6 +56,12 @@
   text-align: center;
   color: $heading-color;
 
+  @media screen and (min-width: $desktop) {
+    @include font-sh(36px,1.17);
+    margin-bottom: 50px;
+  }
+  
+
   &--visually-hidden {
     @extend %hidden;
   }
@@ -62,28 +75,31 @@
 .list {
   @media screen and (min-width: $tablet) {
     display: flex;
+  }
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
     flex-wrap: wrap;
     margin: -15px;
   }
+
 }
 
 .list__item {
   &--long {
     display: flex;
   }
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
       flex-basis: calc((100% - 2 * 30px) / 2);
       margin: 15px;
     }
+
+    
 }
 
 .list__item:not(:last-child) {
   @media screen and (max-width: 767px) {
     margin-bottom: 30px;
+  }  
+  @media screen and (min-width: $desktop) {
+    margin-right: 30px;
   }
-  @media screen and (min-width: $tablet) {
-    flex-basis: calc((100% - 2 * 30px) / 2);
-    margin: 15px;
-  }
-  
 }

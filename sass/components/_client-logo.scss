@@ -1,13 +1,23 @@
 .client-list {
   @extend %flex;
-  flex-wrap: wrap;
-  margin: -15px;
+
+  @media screen and (max-width: $desktop - 1px) {
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 
   &__item {
     flex-basis: calc((100% - 2 * 30px) / 2);
-    margin: 15px;
-    @media screen and (min-width: $tablet) {
+    @media screen and (max-width: $desktop - 1px) {
+      margin: 15px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
       flex-basis: calc((100% - 3 * 30px) / 3);
+    }
+  }
+  &__item:not(:last-child) {
+    @media screen and (min-width: $desktop) {
+      margin-right: 30px;;
     }
   }
 }

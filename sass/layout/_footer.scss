@@ -8,20 +8,33 @@
   @media screen and (min-width: $tablet) {
     display: flex;
     justify-content: center;
+  }
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
     align-items: flex-start;
-    flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+  @media screen and (min-width: $desktop) {
+    align-items: baseline;
   }
 }
 .address-container {
+  text-align: center;
+  @media screen and (max-width: $desktop - 1px) {
     margin-bottom: 60px;
-    text-align: center;
-    @media screen and (min-width: $tablet) {
-      margin-right: 165px;;
-    }
+  }
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    margin-right: 165px;
+  }
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+  }
 }
 
 .address-list__item:not(:last-child) {
     margin-bottom: 8px;
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 9px;
+    }
 }
   
 .address-list__text {
@@ -34,19 +47,34 @@
 }
 
 .footer-social {
+  @media screen and (max-width: $tablet - 1px) {
   margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: auto;
+    margin-right: 93px;
+  }
+
     &__subtitle {
       display: block;
       margin-bottom: 20px;
       text-align: center;
       color: $white-color;
+
+      @media screen and (min-width: $desktop) {
+        text-align: left;
+      }
     }
 }
 
 .email {
     &__container {
       @extend %flex;
-      flex-direction: column;
+      
+      @media screen and (max-width: $desktop - 1px) {
+        flex-direction: column;
+      }
     }
   
     &__subtitle {
@@ -54,6 +82,9 @@
       margin-bottom: 20px;
       text-align: center;
       color: $white-color;
+      @media screen and (min-width: $desktop) {
+        text-align: left;
+      }
     }
   
     &__button {
@@ -69,14 +100,20 @@
 .email__field {
     width: 100%;
     height: 50px;
-    margin-bottom: 20px;
     padding: 15px 16px;
     background-color: $dark-background-color;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
+    @media screen and (max-width: $desktop - 1px) {
+      margin-bottom: 20px;
+    }
     @media screen and (min-width: $tablet) {
       width: 450px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 358px;
+      margin-right: 12px;
     }
   
     &::placeholder {

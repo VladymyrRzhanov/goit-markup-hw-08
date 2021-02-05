@@ -42,12 +42,15 @@ body {
 
 .contacts-list__link {
     display: inline-flex;
-    // padding-top: 32px;
-    // padding-bottom: 32px;
     align-items: center;
     @include fontAll(500, 14px, 1.14, 0.02em);
     color: $text-color;
     @include transition(color);
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
 
     &:hover,
     &:focus {

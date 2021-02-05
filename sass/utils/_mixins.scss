@@ -23,3 +23,9 @@
     transition-property: $properties;
   }
 }
+
+
+@mixin font-sh($size, $height) {
+  font-size: $size;
+  line-height: $height;
+}

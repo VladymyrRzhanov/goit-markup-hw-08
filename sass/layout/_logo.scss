@@ -2,6 +2,9 @@
   font-family: "Raleway";
   @include fontAll(700, 24px, 1.17, 0.03em);
   color: #000000;
+  @media screen and (min-width: $desktop) {
+    @include font-sh(26px, 1.19);
+  }
 
   &__text {
     color: $accent-color;
