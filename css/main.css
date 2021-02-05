@@ -360,7 +360,7 @@ img {
   margin: 1px;
 }
 
-.header__menu, .contacts-social, .email__container, .email__button, .benefits, .social-list, .social-link, .client-list, .client-list__link, .consent-field, .project__thumb {
+.header__menu, .contacts-social, .email__container, .email__button, .benefits, .social-list, .social-link, .client-list, .client-list__link, .consent-field {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -449,17 +449,20 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin: -15px;
   }
 }
 
+.list__item--long {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media screen and (min-width: 768px) {
-  .list .list__item {
+  .list__item {
     -ms-flex-preferred-size: calc((100% - 2 * 30px) / 2);
         flex-basis: calc((100% - 2 * 30px) / 2);
     margin: 15px;
@@ -1263,7 +1266,9 @@ body {
 }
 
 .project {
-  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .project__thumb {
@@ -1272,6 +1277,9 @@ body {
 }
 
 .project__meta {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding: 20px 24px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
@@ -1297,7 +1305,13 @@ body {
 }
 
 .project__link {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 4px 4px rgba(0, 0, 0, 0), 1px 4px 6px rgba(0, 0, 0, 0);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 4px 4px rgba(0, 0, 0, 0), 1px 4px 6px rgba(0, 0, 0, 0);
 }
@@ -1327,6 +1341,12 @@ body {
   transition-property: -webkit-transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
+}
+
+@media screen and (min-width: 768px) {
+  .project__overlay {
+    padding: 49px 24px;
+  }
 }
 
 .project__link:hover .project__overlay,
