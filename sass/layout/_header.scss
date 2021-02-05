@@ -3,15 +3,67 @@ body {
     font-family: $font-main;
   }
 
-  .header {
-  }
-
-  .header__menu {
-    @extend %flex;
-    justify-content: space-between;
-  }
+.header__menu {
+  @extend %flex;
+  justify-content: space-between;
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+  }  
+}
   
-  .burger-menu {
+
+  /* Контакты в навигации шапки */
+
+.contacts-list {
+  margin-left: auto;
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+  @media screen and (min-width: $desktop) {
+    display:flex;
+  }
+}
+
+.contacts-list__item {
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: $desktop - 1px) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.contacts-list__link {
+    display: inline-flex;
+    // padding-top: 32px;
+    // padding-bottom: 32px;
+    align-items: center;
+    @include fontAll(500, 14px, 1.14, 0.02em);
+    color: $text-color;
+    @include transition(color);
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }   
+}
+
+.contacts-link__icon {
+  margin-right: 8px;
+  fill: currentColor;
+  @media screen and (min-width: $desktop) {
+    margin-right: 10px;
+  }
+}
+
+.burger-menu {
       position: relative;
       z-index: 2;
       display: inline-flex;
@@ -20,7 +72,11 @@ body {
       background-color: transparent;
       border: none;
       cursor: pointer;
-  }
+      
+      @media screen and (min-width: $tablet) {
+        display: none;
+      }
+}
   
   .burger-menu__open {
       fill: $heading-color;

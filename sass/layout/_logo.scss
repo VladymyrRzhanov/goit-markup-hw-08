@@ -8,7 +8,15 @@
   }
 
   &--top {
-    padding: 16px 0;
+    @media screen and (max-width: $tablet - 1px) {
+      padding: 16px 0;
+    }
+    @media screen and (min-width: $tablet) {
+      margin-right: 88px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-right: 93px;
+    }
   }
 
   &--bottom {
