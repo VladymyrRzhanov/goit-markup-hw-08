@@ -1,5 +1,7 @@
 .client-list {
-  @extend %flex;
+  @media screen and (min-width: 400px) {
+    display: flex;
+  }
 
   @media screen and (max-width: $desktop - 1px) {
     flex-wrap: wrap;
@@ -7,7 +9,9 @@
   }
 
   &__item {
-    flex-basis: calc((100% - 2 * 30px) / 2);
+    @media screen and (min-width: 400px) {
+      flex-basis: calc((100% - 2 * 30px) / 2);
+    }
     @media screen and (max-width: $desktop - 1px) {
       margin: 15px;
     }
@@ -17,13 +21,15 @@
   }
   &__item:not(:last-child) {
     @media screen and (min-width: $desktop) {
-      margin-right: 30px;;
+      margin-right: 30px;
     }
   }
 }
 
 .client-list__link {
   @extend %flex;
+  align-items: center;
+  justify-content: center;
   height: 90px;
   border: 1px solid $social-link-color;
   border-radius: 4px;

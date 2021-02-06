@@ -1,18 +1,32 @@
 body {
-    background-color: $white-color;
-    font-family: $font-main;
+  background-color: $white-color;
+  font-family: $font-main;
+  @media screen and (min-width: $desktop) {
+    padding-top: 80px;
+  }
+}
+
+.header {
+  border-bottom: 1px solid #ececec;
+  @media screen and (min-width: $desktop) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #fff;
   }
 
-.header__menu {
-  @extend %flex;
-  justify-content: space-between;
-  @media screen and (min-width: $tablet) {
-    justify-content: center;
-  }  
+  &__menu {
+    @extend %flex;
+    justify-content: space-between;
+    @media screen and (min-width: $tablet) {
+      justify-content: center;
+    }
+  }
 }
-  
 
-  /* Контакты в навигации шапки */
+/* Контакты в навигации шапки */
 
 .contacts-list {
   margin-left: auto;
@@ -20,7 +34,7 @@ body {
     display: none;
   }
   @media screen and (min-width: $desktop) {
-    display:flex;
+    display: flex;
   }
 }
 
@@ -41,21 +55,21 @@ body {
 }
 
 .contacts-list__link {
-    display: inline-flex;
-    align-items: center;
-    @include fontAll(500, 14px, 1.14, 0.02em);
-    color: $text-color;
-    @include transition(color);
+  display: inline-flex;
+  align-items: center;
+  @include fontAll(500, 14px, 1.14, 0.02em);
+  color: $text-color;
+  @include transition(color);
 
-    @media screen and (min-width: $desktop) {
-      padding-top: 32px;
-      padding-bottom: 32px;
-    }
+  @media screen and (min-width: $desktop) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 
-    &:hover,
-    &:focus {
-      color: $accent-color;
-    }   
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 
 .contacts-link__icon {
@@ -67,44 +81,43 @@ body {
 }
 
 .burger-menu {
-      position: relative;
-      z-index: 2;
-      display: inline-flex;
-      margin: 0;
-      padding: 0;
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      
-      @media screen and (min-width: $tablet) {
-        display: none;
-      }
-}
-  
-  .burger-menu__open {
-      fill: $heading-color;
-    
-      .burger-menu:hover &,
-      .burger-menu:focus & {
-        fill: $accent-color;
-      }
-    
-      .burger-menu.is-open & {
-        display: none;
-      }
-  }
-  
-.burger-menu__close {
-    fill: $heading-color;
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media screen and (min-width: $tablet) {
     display: none;
-  
-      .burger-menu:hover &,
-      .burger-menu:focus & {
-          fill: $accent-color;
-      }
-  
-      .burger-menu.is-open & {
-          display: block;
-      }
+  }
 }
-  
+
+.burger-menu__open {
+  fill: $heading-color;
+
+  .burger-menu:hover &,
+  .burger-menu:focus & {
+    fill: $accent-color;
+  }
+
+  .burger-menu.is-open & {
+    display: none;
+  }
+}
+
+.burger-menu__close {
+  fill: $heading-color;
+  display: none;
+
+  .burger-menu:hover &,
+  .burger-menu:focus & {
+    fill: $accent-color;
+  }
+
+  .burger-menu.is-open & {
+    display: block;
+  }
+}

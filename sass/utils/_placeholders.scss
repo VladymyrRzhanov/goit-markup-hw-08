@@ -5,9 +5,16 @@
   height: 1px;
   margin: 1px;
 }
-  
+
 %flex {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+%flex-vertical {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }

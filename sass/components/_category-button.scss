@@ -5,15 +5,21 @@
   align-content: space-between;
   margin-bottom: 46px;
   @media screen and (max-width: $tablet - 1px) {
-    min-height: 91px;
+    margin-bottom: 25px;
   }
   @media screen and (min-width: $tablet) {
-    margin-bottom: 36px;
+    margin-bottom: 30px;
     justify-content: center;
     align-content: center;
   }
   @media screen and (min-width: $desktop) {
     margin-bottom: 50px;
+  }
+
+  &__item {
+    @media screen and (max-width: $tablet - 1px) {
+      margin-bottom: 15px;
+    }
   }
 
   &__item:not(:last-child) {
