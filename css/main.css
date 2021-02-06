@@ -1116,8 +1116,13 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
-  font-size: 44px;
-  line-height: 1.36;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .hero__button {
@@ -1653,11 +1658,6 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .card-set {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin: -15px;

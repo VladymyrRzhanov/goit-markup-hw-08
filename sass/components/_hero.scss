@@ -30,7 +30,9 @@
     @include fontAll(900, 26px, 1.62, 0.06em);
     text-transform: uppercase;
     color: $white-color;
-    @include font-sh(44px,1.36)
+    @media screen and (min-width: $desktop) {
+      @include font-sh(44px, 1.36);
+    }
   }
 
   &__button {
