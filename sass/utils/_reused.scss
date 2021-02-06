@@ -7,7 +7,7 @@
   }
 
   &--narrow {
-    padding-top: 0;
+    padding-top: unset;
     @media screen and (max-width: $desktop - 1px) {
       display: none;
     }
