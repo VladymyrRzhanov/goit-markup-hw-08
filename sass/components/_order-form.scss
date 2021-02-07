@@ -48,21 +48,23 @@
     @include fontAll-w(12px, 1.17, 0.01em);
     color: rgba(117, 117, 117, 0.5);
     @media screen and (min-width: $desktop) {
-      @include font-sh(12px,1.17)
+      @include font-sh(12px, 1.17);
     }
   }
 }
 
 .consent-field {
   @extend %flex;
-  align-items: flex-end;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  @include fontAll-w(12px, 1.17, 0.03em);
+  @include fontAll-w(10px, 1.17, 0.03em);
   color: $text-color;
+  @media screen and (min-width: $mobile) {
+    @include font-sh(12px, 1.71);
+  }
   @media screen and (min-width: $desktop) {
-    @include font-sh(14px,1.71)
+    @include font-sh(14px, 1.71);
   }
 
   &__check {

@@ -158,8 +158,11 @@
                     <li class="list__item">
                         <a href="" class="capabilities">
                             <div class="capabilities__image">
-                                <img src="./images/desktop-capabilities/img1.jpg" alt="Написание кода по блок-схеме." width="370"
-                                    height="294">
+                                <picture>
+                                    <source srcset="./images/desktop-capabilities/img1.webp 1x, ./images/desktop-capabilities/img1@2x.webp 2x" type="image/webp" />
+                                    <img srcset="./images/desktop-capabilities/img1.jpg 1x, ./images/desktop-capabilities/img1@2x.jpg 2x" src="./images/desktop-capabilities/img1.jpg"
+                                        alt="Написание кода по блок-схеме." width="370" />
+                                </picture>
                                 <p class="capabilities__subtitle subtitle">Десктопные приложения</p>
                             </div>
                         </a>
@@ -167,8 +170,13 @@
                     <li class="list__item">
                         <a href="" class="capabilities">
                             <div class="capabilities__image">
-                                <img src="./images/desktop-capabilities/img2.jpg" alt="Разработка ПО для смартфонов." width="370"
-                                    height="294">
+                                <picture>
+                                    <source srcset="./images/desktop-capabilities/img2.webp 1x, ./images/desktop-capabilities/img2@2x.webp 2x"
+                                        type="image/webp" />
+                                    <img srcset="./images/desktop-capabilities/img2.jpg 1x, ./images/desktop-capabilities/img2@2x.jpg 2x"
+                                        src="./images/desktop-capabilities/img2.jpg" alt="Разработка ПО для смартфонов."
+                                        width="370" />
+                                </picture>
                                 <p class="capabilities__subtitle subtitle">Мобильные приложения</p>
                             </div>
                         </a>
@@ -176,8 +184,12 @@
                     <li class="list__item">
                         <a href="" class="capabilities">
                             <div class="capabilities__image">
-                                <img src="./images/desktop-capabilities/img3.jpg" alt="Таблица цветов в графическом планшете." width="370"
-                                    height="294">
+                                <picture>
+                                    <source srcset="./images/desktop-capabilities/img3.webp 1x, ./images/desktop-capabilities/img3@2x.webp 2x"
+                                        type="image/webp" />
+                                    <img srcset="./images/desktop-capabilities/img3.jpg 1x, ./images/desktop-capabilities/img3@2x.jpg 2x"
+                                        src="./images/desktop-capabilities/img3.jpg" alt="Таблица цветов в графическом планшете." width="370" />
+                                </picture>
                                 <p class="capabilities__subtitle subtitle">Дизайнерские решения</p>
                             </div>
                         </a>
@@ -185,7 +197,6 @@
                 </ul>
             </div>
         </section>
-
         <!-- Сотрудники -->
 
         <section class="section section--light-background">
@@ -195,9 +206,19 @@
                     <li class="list__item list__item--bottom">
                         <div class="employee">
                             <picture>
-                                <source srcset="./images/tablet-team/product_designer.webp 1x, ./images/tablet-team/product_designer@2x.webp 2x, ./images/mobile-team/product_designer.webp 1x, ./images/mobile-team/product_designer@2x.webp 2x" type="image/webp">
-                                <img srcset="./images/mobile-team/product_designer.jpg 1x, ./images/mobile-team/product_designer@2x.jpg 2x" src="./images/mobile-team/product_designer.jpg" alt="Мужчина с бородой, в бордовой рубашке, улыбается." class="employee__image">
+                                <source srcset="./images/mobile-team/product_designer.webp 1x, ./images/mobile-team/product_designer@2x.webp 2x" media="(max-width: 767px)" type="image/webp" />
+                                <source srcset="./images/tablet-team/product_designer.webp 1x, ./images/tablet-team/product_designer@2x.webp 2x" media="(max-width: 1199px)" type="image/webp" />
+                                <source srcset="./images/desktop-team/product_designer.webp 1x, ./images/desktop-team/product_designer@2x.webp 2x" media="(min-width: 1200px)" type="image/webp" />
+                                <source srcset="./images/mobile-team/product_designer.jpg 1x, ./images/mobile-team/product_designer@2x.jpg 2x"
+                                    media="(max-width: 767px)"/>
+                                <source srcset="./images/tablet-team/product_designer.jpg 1x, ./images/tablet-team/product_designer@2x.jpg 2x"
+                                    media="(max-width: 1199px)"/>
+                                <source srcset="./images/desktop-team/product_designer.jpg 1x, ./images/desktop-team/product_designer@2x.jpg 2x"
+                                    media="(min-width: 1200px)"/>
+                                
+                                <img src="./images/tablet-team/product_designer.jpg" class="employee__image" alt="Мужчина с бородой, в бордовой рубашке, улыбается." width="270"/>
                             </picture>
+
                             <h3 class="employee__name">Игорь Демьяненко</h3>
                             <p lang="en" class="employee__position">Product Designer</p>
                             <ul class="social-list social-list--bottom">
@@ -234,9 +255,23 @@
                     </li>
                     <li class="list__item list__item--bottom">
                         <div class="employee">
-                            <img src="./images/mobile-team/frontend_developer.jpg"
-                            alt="Женщина со светлыми волосами, в черном пиджаке, улыбается." width="450" height="460"
-                            class="employee__image">
+                            <picture>
+                                <source srcset="./images/mobile-team/frontend_developer.webp 1x, ./images/mobile-team/frontend_developer@2x.webp 2x"
+                                    media="(max-width: 767px)" type="image/webp" />
+                                <source srcset="./images/tablet-team/frontend_developer.webp 1x, ./images/tablet-team/frontend_developer@2x.webp 2x"
+                                    media="(max-width: 1199px)" type="image/webp" />
+                                <source
+                                    srcset="./images/desktop-team/frontend_developer.webp 1x, ./images/desktop-team/frontend_developer@2x.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp" />
+                                <source srcset="./images/mobile-team/frontend_developer.jpg 1x, ./images/mobile-team/frontend_developer@2x.jpg 2x"
+                                    media="(max-width: 767px)" />
+                                <source srcset="./images/tablet-team/frontend_developer.jpg 1x, ./images/tablet-team/frontend_developer@2x.jpg 2x"
+                                    media="(max-width: 1199px)" />
+                                <source srcset="./images/desktop-team/frontend_developer.jpg 1x, ./images/desktop-team/frontend_developer@2x.jpg 2x"
+                                    media="(min-width: 1200px)" />
+                                <img src="./images/tablet-team/frontend_developer.jpg" class="employee__image"
+                                    alt="Женщина со светлыми волосами, в черном пиджаке, улыбается." width="270" />
+                            </picture>
                             <h3 class="employee__name">Ольга Репина</h3>
                             <p lang="en" class="employee__position">Frontend Developer</p>
                             <ul class="social-list social-list--bottom">
@@ -273,8 +308,23 @@
                     </li>
                     <li class="list__item list__item--bottom">
                         <div class="employee">
-                            <img src="./images/mobile-team/marketing.jpg" alt="Мужчина в голубой рубашке, улыбается, смотрит в сторону."
-                            width="450" height="460" class="employee__image">
+                            <picture>
+                                <source srcset="./images/mobile-team/marketing.webp 1x, ./images/mobile-team/marketing@2x.webp 2x"
+                                    media="(max-width: 767px)" type="image/webp" />
+                                <source srcset="./images/tablet-team/marketing.webp 1x, ./images/tablet-team/marketing@2x.webp 2x"
+                                    media="(max-width: 1199px)" type="image/webp" />
+                                <source srcset="./images/desktop-team/marketing.webp 1x, ./images/desktop-team/marketing@2x.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp" />
+                                <source srcset="./images/mobile-team/marketing.jpg 1x, ./images/mobile-team/marketing@2x.jpg 2x"
+                                    media="(max-width: 767px)" />
+                                <source srcset="./images/tablet-team/marketing.jpg 1x, ./images/tablet-team/marketing@2x.jpg 2x"
+                                    media="(max-width: 1199px)" />
+                                <source srcset="./images/desktop-team/marketing.jpg 1x, ./images/desktop-team/marketing@2x.jpg 2x"
+                                    media="(min-width: 1200px)" />
+                            
+                                <img src="./images/tablet-team/marketing.jpg" class="employee__image"
+                                    alt="Мужчина в голубой рубашке, улыбается, смотрит в сторону." width="270" />
+                            </picture>
                             <h3 class="employee__name">Николай Тарасов</h3>
                             <p lang="en" class="employee__position">Marketing</p>
                             <ul class="social-list social-list--bottom">
@@ -311,9 +361,24 @@
                     </li>
                     <li class="list__item list__item--bottom">
                         <div class="employee">
-                            <img src="./images/mobile-team/ui_designer.jpg" alt="Мужчина в с бородой, в черной футболке и очках."
-                            width="450" height="460" class="employee__image">
-                            <h3 class="employee__name">Михаил Ермаков</h3>
+                            <picture>
+                                <source srcset="./images/mobile-team/ui_designer.webp 1x, ./images/mobile-team/ui_designer@2x.webp 2x"
+                                    media="(max-width: 767px)" type="image/webp" />
+                                <source srcset="./images/tablet-team/ui_designer.webp 1x, ./images/tablet-team/ui_designer@2x.webp 2x"
+                                    media="(max-width: 1199px)" type="image/webp" />
+                                <source srcset="./images/desktop-team/ui_designer.webp 1x, ./images/desktop-team/ui_designer@2x.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp" />
+                                <source srcset="./images/mobile-team/ui_designer.jpg 1x, ./images/mobile-team/ui_designer@2x.jpg 2x"
+                                    media="(max-width: 767px)" />
+                                <source srcset="./images/tablet-team/ui_designer.jpg 1x, ./images/tablet-team/ui_designer@2x.jpg 2x"
+                                    media="(max-width: 1199px)" />
+                                <source srcset="./images/desktop-team/ui_designer.jpg 1x, ./images/desktop-team/ui_designer@2x.jpg 2x"
+                                    media="(min-width: 1200px)" />
+                            
+                                <img src="./images/tablet-team/ui_designer.jpg" class="employee__image"
+                                    alt="Мужчина в с бородой, в черной футболке и очках." width="270" />
+                            </picture>
+                           <h3 class="employee__name">Михаил Ермаков</h3>
                             <p lang="en" class="employee__position">UI Designer</p>
                             <ul class="social-list social-list--bottom">
                                 <li class="social-list__item">

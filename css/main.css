@@ -1419,18 +1419,28 @@ body {
   transition-property: opacity;
 }
 
+@media screen and (min-width: 480px) {
+  .backdrop {
+    padding: 93px 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .backdrop {
+    padding: 93px 159px;
+  }
+}
+
 .backdrop--is-hidden {
   opacity: 0;
   pointer-events: none;
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: relative;
   width: 100%;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
   padding: 40px;
   background: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1448,6 +1458,16 @@ body {
   .modal {
     width: 450px;
     height: 609px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
   }
 }
 
@@ -1471,8 +1491,13 @@ body {
 .backdrop--is-hidden .modal {
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
-  -webkit-transform: translate(-50%, -50%) scale(0.8);
-          transform: translate(-50%, -50%) scale(0.8);
+}
+
+@media screen and (min-width: 1200px) {
+  .backdrop--is-hidden .modal {
+    -webkit-transform: translate(-50%, -50%) scale(0.8);
+            transform: translate(-50%, -50%) scale(0.8);
+  }
 }
 
 .modal__button {
@@ -1606,16 +1631,20 @@ body {
 }
 
 .consent-field {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+@media screen and (min-width: 480px) {
+  .consent-field {
+    font-size: 12px;
+    line-height: 1.71;
+  }
 }
 
 @media screen and (min-width: 1200px) {
