@@ -38,7 +38,7 @@
     width: 450px;
     height: 609px;
   }
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $tablet) {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -62,7 +62,7 @@
 
   .backdrop--is-hidden & {
     transform: scale(0.8);
-    @media screen and (min-width: $desktop) {
+    @media screen and (min-width: $tablet) {
       transform: translate(-50%, -50%) scale(0.8);
     }
   }

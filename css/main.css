@@ -1461,7 +1461,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .modal {
     position: absolute;
     top: 50%;
@@ -1493,7 +1493,7 @@ body {
           transform: scale(0.8);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .backdrop--is-hidden .modal {
     -webkit-transform: translate(-50%, -50%) scale(0.8);
             transform: translate(-50%, -50%) scale(0.8);
