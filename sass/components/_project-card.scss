@@ -26,9 +26,47 @@
   }
 }
 
+// .project {
+//   display: flex;
+
+//   &__thumb {
+//     position: relative;
+//     overflow: hidden;
+//   }
+
+//   &__meta {
+//     flex-grow: 1;
+//     padding: 20px 24px;
+//     border-left: 1px solid #eeeeee;
+//     border-right: 1px solid #eeeeee;
+//     border-bottom: 1px solid #eeeeee;
+//   }
+
+//   &__type {
+//     margin-bottom: 4px;
+//     @include fontAll(700, 18px, 2, 0.06em);
+//     text-align: left;
+//     color: $heading-color;
+//   }
+
+//   &__name {
+//     @include fontAll-w(16px, 1.87, 0.03em);
+//     text-align: left;
+//     color: $text-color;
+//   }
+// }
+
 .project {
   display: flex;
+  flex-direction: column;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 4px 4px rgba(0, 0, 0, 0),
+    1px 4px 6px rgba(0, 0, 0, 0);
 
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
   &__thumb {
     position: relative;
     overflow: hidden;
@@ -56,19 +94,6 @@
   }
 }
 
-.project__link {
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 4px 4px rgba(0, 0, 0, 0),
-    1px 4px 6px rgba(0, 0, 0, 0);
-
-  &:hover,
-  &:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-      1px 4px 6px rgba(0, 0, 0, 0.16);
-  }
-}
-
 .project__overlay {
   position: absolute;
   width: 100%;
@@ -82,12 +107,14 @@
   transform: translateY(100%);
   @include transition(transform);
 
+  .project:hover &,
+  .project:focus & {
+    transform: translateY(0%);
+  }
   @media screen and (min-width: $tablet) {
     padding: 49px 24px;
   }
-
-  .project__link:hover &,
-  .project:focus & {
-    transform: translateY(0%);
+  @media screen and (min-width: $desktop) {
+    padding: 63px 24px;
   }
 }
