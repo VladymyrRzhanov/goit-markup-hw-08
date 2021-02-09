@@ -35,17 +35,26 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   @media screen and (min-width: $mobile) {
-    width: 450px;
-    height: 609px;
+    position: relative;
+    left: 50%;
+    max-width: 450px;
+    max-height: 609px;
+    transform: translateX(-50%) scale(1);
   }
   @media screen and (min-width: $tablet) {
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    top: 50%;
+    max-width: 450px;
+    max-height: 609px;
+    transform: translate(-50%,-50%) scale(1);
   }
 
   @media screen and (min-width: $desktop) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
     min-width: 528px;
     min-height: 581px;
   }
@@ -62,6 +71,9 @@
 
   .backdrop--is-hidden & {
     transform: scale(0.8);
+    @media screen and (min-width: $mobile) {
+      transform: translateX(-50%) scale(0.8);
+    }
     @media screen and (min-width: $tablet) {
       transform: translate(-50%, -50%) scale(0.8);
     }

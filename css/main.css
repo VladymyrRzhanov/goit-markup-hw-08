@@ -1456,16 +1456,22 @@ body {
 
 @media screen and (min-width: 480px) {
   .modal {
-    width: 450px;
-    height: 609px;
+    position: relative;
+    left: 50%;
+    max-width: 450px;
+    max-height: 609px;
+    -webkit-transform: translateX(-50%) scale(1);
+            transform: translateX(-50%) scale(1);
   }
 }
 
 @media screen and (min-width: 768px) {
   .modal {
     position: absolute;
-    top: 50%;
     left: 50%;
+    top: 50%;
+    max-width: 450px;
+    max-height: 609px;
     -webkit-transform: translate(-50%, -50%) scale(1);
             transform: translate(-50%, -50%) scale(1);
   }
@@ -1473,6 +1479,11 @@ body {
 
 @media screen and (min-width: 1200px) {
   .modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
     min-width: 528px;
     min-height: 581px;
   }
@@ -1491,6 +1502,13 @@ body {
 .backdrop--is-hidden .modal {
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
+}
+
+@media screen and (min-width: 480px) {
+  .backdrop--is-hidden .modal {
+    -webkit-transform: translateX(-50%) scale(0.8);
+            transform: translateX(-50%) scale(0.8);
+  }
 }
 
 @media screen and (min-width: 768px) {
