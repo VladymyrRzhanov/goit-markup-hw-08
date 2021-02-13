@@ -42,12 +42,10 @@
     transform: translateX(-50%) scale(1);
   }
   @media screen and (min-width: $tablet) {
-    position: absolute;
     left: 50%;
-    top: 50%;
     max-width: 450px;
     max-height: 609px;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%) scale(1);
   }
 
   @media screen and (min-width: $desktop) {

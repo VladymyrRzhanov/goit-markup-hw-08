@@ -1467,13 +1467,11 @@ body {
 
 @media screen and (min-width: 768px) {
   .modal {
-    position: absolute;
     left: 50%;
-    top: 50%;
     max-width: 450px;
     max-height: 609px;
-    -webkit-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: translate(-50%) scale(1);
+            transform: translate(-50%) scale(1);
   }
 }
 
