@@ -26,36 +26,6 @@
   }
 }
 
-// .project {
-//   display: flex;
-
-//   &__thumb {
-//     position: relative;
-//     overflow: hidden;
-//   }
-
-//   &__meta {
-//     flex-grow: 1;
-//     padding: 20px 24px;
-//     border-left: 1px solid #eeeeee;
-//     border-right: 1px solid #eeeeee;
-//     border-bottom: 1px solid #eeeeee;
-//   }
-
-//   &__type {
-//     margin-bottom: 4px;
-//     @include fontAll(700, 18px, 2, 0.06em);
-//     text-align: left;
-//     color: $heading-color;
-//   }
-
-//   &__name {
-//     @include fontAll-w(16px, 1.87, 0.03em);
-//     text-align: left;
-//     color: $text-color;
-//   }
-// }
-
 .project {
   display: flex;
   flex-direction: column;
